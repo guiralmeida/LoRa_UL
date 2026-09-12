@@ -82,7 +82,7 @@ class LeitorSerial(threading.Thread):
             self.fila.put(("erro", f"Não foi possivel abrir {self.porta}:\n{exc}"))
             return
 
-        self.fila.put(("status", f"Conectado a {self.porta} @ {BAUDRATE} bps"))
+        self.fila.put(("status", f"Conectado à {self.porta} @ {BAUDRATE} bps"))
         try:
             ser.reset_input_buffer()
             while not self._parar.is_set():
