@@ -1,0 +1,2 @@
+# Impede conversao de fim de linha em binarios (core.autocrlf esta ativo).
+*.exe binary
