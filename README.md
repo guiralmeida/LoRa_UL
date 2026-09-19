@@ -25,7 +25,7 @@ O **uplink** é o sentido principal da maioria das aplicações de IoT: disposit
 flowchart LR
     LDR["LDR<br/>(luminosidade)"] --> NO["Nó Sensor<br/>ESP32 + RFM95W"]
     NO -- "Rádio LoRa<br/>1 pacote por ciclo" --> GW["Gateway<br/>ESP32 + RFM95W"]
-    GW -- "USB<br/>pacote + RSSI" --> PC["Computador<br/>UL_Test.exe / UL_Test.py"]
+    GW -- "USB<br/>pacote c/ RSSI" --> PC["Computador<br/>UL_Test.exe / UL_Test.py"]
 ```
 
 A comunicação usa **LoRa ponto a ponto**, direto na camada física, entre dois rádios configurados com os mesmos parâmetros. Não há LoRaWAN aqui: não existe servidor de rede, processo de *join* nem criptografia. Isso deixa o experimento simples o bastante para observar o comportamento do rádio em si.
